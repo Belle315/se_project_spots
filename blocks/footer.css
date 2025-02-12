@@ -1,0 +1,10 @@
+.footer {
+  width: 104px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 100px;
+  font-weight: 400;
+  opacity: 70%;
+}

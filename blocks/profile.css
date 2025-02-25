@@ -22,9 +22,16 @@
   border: none;
   background-color: #fcf5e5;
   gap: 8px;
-  opacity: 90%;
+  opacity: 70%;
   display: flex;
   justify-content: flex-start;
+  cursor: pointer;
+  font: #212121;
+  font-weight: 500px;
+}
+
+.profile__edit-btn:hover {
+  background-color: #808080;
 }
 
 .profile__add-btn {
@@ -46,6 +53,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
+  color: #212121;
 }
 
 .profile__description {
@@ -57,6 +65,8 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
+  color: #212121b2;
+  font-weight: 500px;
 }
 
 @media screen and (max-width: 627px) {

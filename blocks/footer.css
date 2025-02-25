@@ -1,10 +1,13 @@
 .footer {
-  width: 104px;
-  height: 16px;
+  max-width: 104px;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  padding: 100px;
+  padding: 60px 0;
   font-weight: 400;
   opacity: 70%;
+}
+
+.footer__copyright {
+  margin: auto 0;
 }

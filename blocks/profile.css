@@ -27,11 +27,11 @@
   justify-content: flex-start;
   cursor: pointer;
   font: #212121;
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 .profile__edit-btn:hover {
-  background-color: #808080;
+  opacity: 1;
 }
 
 .profile__add-btn {
@@ -41,6 +41,11 @@
   align-self: flex-end;
   display: flex;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.profile__add-btn:hover {
+  opacity: 1;
 }
 
 .profile__name {
@@ -66,7 +71,7 @@
   -webkit-box-orient: vertical;
   max-width: 420px;
   color: #212121b2;
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 627px) {

@@ -21,4 +21,6 @@ This project uses the following technologies:
 
 ## Project Link
 
+I AM UNABLE TO UPLOAD A WORKING SOUND VIDEO TO THIS PROJECT AT THE MOMENT
+
 https://belle315.github.io/se_project_spots/

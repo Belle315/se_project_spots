@@ -1,11 +1,11 @@
 # Spots
 
-Image sharing site
+## Image sharing site
 
 ## Introduction
 
-The "Spots" project is an interactive app design that proveds the users with a photo and title of a location.
-this is a customizeable app for any user that has access. Users are allowed to add their own photos, descriptions as well as avatar image, name and desription.
+The "Spots" project is an interactive app design that provides the users with a photo and title of a location.
+this is a customizable app for any user that has access. Users are allowed to add their own photos, descriptions as well as avatar image, name and description.
 
 ## Technologies Used
 
@@ -20,7 +20,5 @@ This project uses the following technologies:
 - **Resposive design** allows users to change and upload any images or descriptions needed/ wanted.
 
 ## Project Link
-
-I AM UNABLE TO UPLOAD A WORKING SOUND VIDEO TO THIS PROJECT AT THE MOMENT
 
 https://belle315.github.io/se_project_spots/

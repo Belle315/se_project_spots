@@ -22,3 +22,5 @@ This project uses the following technologies:
 ## Project Link
 
 https://belle315.github.io/se_project_spots/
+
+https://drive.google.com/file/d/1-Y9LOKAsJ2O0cwGfgaRg1xM5w5rmOfcP/view?usp=sharing

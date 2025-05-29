@@ -14,7 +14,7 @@
   font-family: poppins, Arial, Helvetica, sans-serif;
 }
 
-.modal__opened {
+.modal_is-opened {
   visibility: visible;
 }
 
@@ -39,8 +39,10 @@
 }
 
 .modal__input {
+  display: block;
   padding: 16px 12px;
-  radius: 8px;
+  border-radius: 8px;
+  margin: 8px 0 0;
 }
 
 .modal__title {
@@ -56,7 +58,7 @@
   gap: 8px;
   margin-bottom: 32px;
   font-family: poppins, Arial, Helvetica, sans-serif;
-  weight: 500px;
+  font-weight: 500px;
   font-size: 16px;
   line-height: 100%;
   color: #212121;
@@ -94,6 +96,6 @@
   }
 
   .modal__submit-btn {
-    width: 100%;
+    width: none;
   }
 }

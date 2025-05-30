@@ -17,7 +17,7 @@
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/Avatar.svg"
+            src="images/Avatar.svg"
             alt="Bessie Colman"
             class="profile__avatar"
           />
@@ -26,7 +26,7 @@
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
               <img
-                src="./images/edit-icon.svg"
+                src="images/edit-icon.svg"
                 alt="edit button"
                 class="profile__edit-img"
               />
@@ -35,7 +35,7 @@
           </div>
           <button type="button" class="profile__add-btn">
             <img
-              src="./images/add-img.svg"
+              src="images/add-img.svg"
               alt="add button"
               class="profile__add-img"
             />
@@ -46,45 +46,45 @@
           <ul class="cards__list">
             <li class="card">
               <img
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+                src="images/1-photo-by-moritz-feldmann-from-pexels.jpg"
                 alt="Val Thornes"
                 class="card__image"
               />
               <div class="card__content">
-                <h2 class="card__tittle">Val Thorens</h2>
+                <h2 class="card__title">Val Thorens</h2>
                 <button type="button" class="card__like-btn"></button>
               </div>
             </li>
             <li class="card">
               <img
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
+                src="images/2-photo-by-ceiline-from-pexels.jpg"
                 alt="Restaurant Terrace"
                 class="card__image"
               />
               <div class="card__content">
-                <h2 class="card__tittle">Restaurant Terrace</h2>
+                <h2 class="card__title">Restaurant Terrace</h2>
                 <button type="button" class="card__like-btn"></button>
               </div>
             </li>
             <li class="card">
               <img
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
+                src="images/3-photo-by-tubanur-dogan-from-pexels.jpg"
                 alt="An Outdoor Cafe"
                 class="card__image"
               />
               <div class="card__content">
-                <h2 class="card__tittle">An Outdoor Cafe</h2>
+                <h2 class="card__title">An Outdoor Cafe</h2>
                 <button type="button" class="card__like-btn"></button>
               </div>
             </li>
             <li class="card">
               <img
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
+                src="images/4-photo-by-maurice-laschet-from-pexels.jpg"
                 alt="A very long bridge, over the forest"
                 class="card__image"
               />
               <div class="card__content">
-                <h2 class="card__tittle">
+                <h2 class="card__title">
                   A very long bridge, over the forest...
                 </h2>
                 <button type="button" class="card__like-btn"></button>
@@ -92,23 +92,23 @@
             </li>
             <li class="card">
               <img
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+                src="images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
                 alt="Tunnel with morning light"
                 class="card__image"
               />
               <div class="card__content">
-                <h2 class="card__tittle">Tunnel with morning light</h2>
+                <h2 class="card__title">Tunnel with morning light</h2>
                 <button type="button" class="card__like-btn"></button>
               </div>
             </li>
             <li class="card">
               <img
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+                src="images/6-photo-by-moritz-feldmann-from-pexels.jpg"
                 alt="Mountain house"
                 class="card__image"
               />
               <div class="card__content">
-                <h2 class="card__tittle">Mountain house</h2>
+                <h2 class="card__title">Mountain house</h2>
                 <button type="button" class="card__like-btn"></button>
               </div>
             </li>
@@ -120,7 +120,7 @@
       </footer>
       <div class="modal">
         <div class="modal__container">
-          <button type="submit" class="modal__close-btn"></button>
+          <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit profile</h2>
           <form name="edit-profile" class="modal__form">
             <label for="name" class="modal__label">
@@ -131,9 +131,11 @@
                 class="modal__input"
                 placeholder="Who are you? Drop your name here! "
               />
+            </label>
+            <label for="description" class="modal__label">
               Description
               <input
-                id="Description"
+                id="description"
                 type="text"
                 class="modal__input"
                 placeholder="Tell us about yourself!"
@@ -143,12 +145,11 @@
           </form>
         </div>
       </div>
-
       <div class="modal modal_is-opened">
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">New Post!</h2>
-          <form name="new post" class="modal__form">
+          <form name="newPost" class="modal__form">
             <label for="card-image-input" class="modal__label">
               Image link
               <input
@@ -158,10 +159,10 @@
                 placeholder="Place your Photo Link here!"
               />
             </label>
-            <label for="Photo-caption" class="modal__label">
+            <label for="photo-caption" class="modal__label">
               Caption
               <input
-                id="Photo-caption"
+                id="photo-caption"
                 type="text"
                 class="modal__input"
                 placeholder="Add Caption!"

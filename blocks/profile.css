@@ -40,7 +40,7 @@
   border: none;
   background-color: #212121;
   align-self: flex-end;
-  display: flex;
+  display: block;
   border-radius: 8px;
   cursor: pointer;
   width: 157px;
@@ -49,6 +49,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
+  text-align: center;
 }
 
 .profile__add-btn:hover {

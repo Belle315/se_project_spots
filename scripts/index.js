@@ -42,37 +42,41 @@ const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostSubmit = newPostModal.querySelector(".modal__form");
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
-const newPostTitleInput = document.querySelector("#new-post-title");
-const newPostContentInput = document.querySelector("#new-post-content");
+const newPostTitleInput = document.querySelector("#card-image-input");
+const newPostContentInput = document.querySelector("#photo-caption");
+
+function closeModal(modalElement) {
+  modalElement.classList.remove("modal_is-opened");
+}
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  editProfileModal.classList.add("modal_is-opened");
+  openModal(editProfileModal);
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 });
 
-editProfileForm.addEventListener("submit", handleEditProfileSubmit);
-
-function handleEditProfileSubmit(evt) {
+editProfileForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
-  editProfileModal.classList.remove("modal_is-opened");
-}
+  closeModal(editProfileModal);
+});
 
 newPostBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
+  openModal(newPostModal);
+});
+
+newPostCloseBtn.addEventListener("click", function () {
+  closeModal(newPostModal);
 });
 
 newPostSubmit.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  newPostModal.classList.remove("modal_is-opened");
-});
-
-newPostCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_is-opened");
+  console.log("New Post Title:", newPostTitleInput.value);
+  console.log("New Post Content:", newPostContentInput.value);
+  closeModal(newPostModal);
 });

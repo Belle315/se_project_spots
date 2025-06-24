@@ -63,7 +63,7 @@
   height: 400;
   top: 204px;
   left: 355px;
-  border: 1, solid #212121;
+  border: 1px, solid #212121;
 }
 
 .modal__input:hover {

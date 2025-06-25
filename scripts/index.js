@@ -49,6 +49,10 @@ function closeModal(modalElement) {
   modalElement.classList.remove("modal_is-opened");
 }
 
+function openModal(modalElement) {
+  modalElement.classList.add("modal_is-opened");
+}
+
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;

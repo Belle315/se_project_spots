@@ -13,7 +13,6 @@
   padding: 0 12px;
   font-family: poppins, Arial, Helvetica, sans-serif;
   opacity: 0;
-  visibility: hidden;
   transition: opacity 0.5s ease-in-out, visibility 0.5s;
 }
 
@@ -59,11 +58,11 @@
   line-height: 100%;
   color: #212121;
   gap: 8px;
-  width: 730;
-  height: 400;
+  width: 730px;
+  height: 400px;
   top: 204px;
   left: 355px;
-  border: 1px, solid #212121;
+  border: 1px solid #212121;
 }
 
 .modal__input:hover {
@@ -140,4 +139,27 @@
   .modal__input {
     font-size: 16px;
   }
+}
+
+.modal-preview .modal__container {
+  background-color: transparent;
+  padding: 0;
+  max-width: none;
+}
+
+.modal-preview .modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-preview .modal__caption {
+  margin-top: 12px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
 }

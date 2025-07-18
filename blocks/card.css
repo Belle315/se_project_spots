@@ -1,5 +1,6 @@
 .card {
-  max-width: 413px;
+  position: relative;
+  width: 413px;
 }
 
 .card__image {
@@ -45,12 +46,36 @@
   opacity: 1;
 }
 
+.card__like-btn.card__like-btn-active {
+  background-image: url(../images/UnionRed.svg);
+}
+
+.card__delete-btn {
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/DeleteIcon.svg);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 10px;
+  right: 16px;
+  background-color: transparent;
+  transition: background-image 0.2 ease;
+}
+
+.card__delete-btn-active {
+  background-image: url(../images/trashCanRed.svg);
+}
+.card__delete-btn:hover {
+  background-image: url("../images/trashCanRed.svg");
+}
+
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
   }
 
-  .card__tittle {
+  .card__title {
     max-width: 250px;
     font-size: 16px;
   }

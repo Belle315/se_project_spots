@@ -61,8 +61,8 @@
         <p class="footer__copyright">2023 © Spots</p>
       </footer>
       <div class="modal" id="edit-profile-modal">
-        <div class="modal__container">
-          <button type="button" class="modal__close-btn"></button>
+        <div class="modal__preview-container">
+          <button type="button" class="modal__close-btn_type_preview"></button>
           <h2 class="modal__title">Edit profile</h2>
           <form name="edit-profile" class="modal__form">
             <label for="profile-name-input" class="modal__label">
@@ -91,7 +91,7 @@
       </div>
       <div class="modal" id="new-post-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn"></button>
+          <button type="button" class="modal__close-btn_type_preview"></button>
           <h2 class="modal__title">New Post!</h2>
           <form name="newPost" class="modal__form" id="addCardFormEl">
             <label for="card-image-input" class="modal__label">
@@ -119,15 +119,13 @@
         </div>
       </div>
     </div>
-    <div id="image-preview-modal" class="modal modal-preview">
+    <div id="image-preview-modal" class="modal_type_preview modal_is-opened">
       <div class="modal__container">
-        <button class="modal__close-btn" type="button"></button>
-        <img src="#" alt="#" class="modal__image" />
+        <button class="modal__close-btn_type_preview" type="button"></button>
+        <img src="" alt="" class="modal__image" />
         <p class="modal__caption"></p>
       </div>
     </div>
     <script defer src="scripts/index.js"></script>
   </body>
 </html>
-
-<!--the first three corrections are breaking my code for some reason-->

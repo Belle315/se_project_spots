@@ -28,7 +28,9 @@ const initialCards = [
 // DOM elements
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
-const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
+const editProfileCloseBtn = editProfileModal.querySelector(
+  ".modal__close-btn_type_preview"
+);
 const editProfileNameInput = editProfileModal.querySelector(
   "#profile-name-input"
 );
@@ -39,7 +41,9 @@ const editProfileForm = editProfileModal.querySelector(".modal__form");
 
 const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
-const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
+const newPostCloseBtn = newPostModal.querySelector(
+  ".modal__close-btn_type_preview"
+);
 const addCardFormEl = newPostModal.querySelector(".modal__form");
 
 const profileNameEl = document.querySelector(".profile__name");
@@ -57,7 +61,9 @@ const cardsList = document.querySelector(".cards__list");
 const imagePreviewModal = document.querySelector("#image-preview-modal");
 const modalImage = imagePreviewModal.querySelector(".modal__image");
 const modalCaption = imagePreviewModal.querySelector(".modal__caption");
-const modalCloseBtn = imagePreviewModal.querySelector(".modal__close-btn");
+const modalCloseBtn = imagePreviewModal.querySelector(
+  ".modal__close-btn_type_preview"
+);
 
 // Functions
 function getCardElement(data) {
@@ -80,6 +86,7 @@ function getCardElement(data) {
   });
 
   cardImageEl.addEventListener("click", function () {
+    console.log("Preview clicked:", data.link);
     modalImage.src = data.link;
     modalImage.alt = data.name;
     modalCaption.textContent = data.name;

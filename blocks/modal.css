@@ -44,7 +44,6 @@
   cursor: pointer;
   padding: 0;
   opacity: 0.8;
-  color: #ffffff;
   z-index: 1002;
 }
 
@@ -112,8 +111,8 @@
 .modal__caption {
   position: absolute;
   top: calc(100% + 16px);
-  left: 17%;
-  margin-top: 0;
+  left: 12%;
+  margin-top: -33px;
   background-color: #212121;
   color: #ffffff;
   padding: 4px 8px;
@@ -135,6 +134,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  width: 100%;
 }
 
 .modal_type_preview {

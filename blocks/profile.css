@@ -36,13 +36,12 @@
 }
 
 .profile__new-post-btn {
-  margin-top: auto;
+  width: 100%;
   border: none;
   background-color: #212121;
   display: block;
   border-radius: 8px;
   cursor: pointer;
-  width: 157px;
   height: 52px;
   color: #fcf5e5;
   gap: 8px;

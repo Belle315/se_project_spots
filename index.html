@@ -16,6 +16,7 @@
       </header>
       <main class="content">
         <section class="profile page__section">
+          <h2 class="profile__title">Profile</h2>
           <img
             src="images/Avatar.svg"
             alt="Bessie Colman"
@@ -43,11 +44,16 @@
           </button>
         </section>
         <section class="cards page__section">
+          <h2 class="cards__title">Cards</h2>
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
                 <button type="button" class="card__delete-btn"></button>
-                <img src="" alt="" class="card__image" />
+                <img
+                  src="images/placeholder.jpg"
+                  alt="placeholder image"
+                  class="card__image"
+                />
                 <div class="card__content">
                   <h2 class="card__title"></h2>
                   <button type="button" class="card__like-btn"></button>
@@ -71,7 +77,7 @@
                 id="profile-name-input"
                 type="text"
                 class="modal__input"
-                placeholder="Who are you? Drop your name here!"
+                placeholder="Who are you? Drop your name here! "
                 required
               />
             </label>
@@ -119,12 +125,8 @@
         </div>
       </div>
     </div>
-    <div
-      class="modal_is-opened"
-      id="image-preview-modal"
-      class="modal_type_preview"
-    >
-      <div class="modal__preview-container">
+    <div class="modal modal_is-opened-type-preview" id="image-preview-modal">
+      <div class="modal__container">
         <button
           aria-label="close modal"
           class="modal__close-btn_type_preview"

@@ -44,7 +44,6 @@
           </button>
         </section>
         <section class="cards page__section">
-          <h2 class="cards__title">Cards</h2>
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
@@ -97,8 +96,7 @@
       </div>
       <div class="modal" id="new-post-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn_type_preview"></button>
-          <h2 class="modal__title">New Post!</h2>
+          <button type="button" class="modal__close-btn"></button>
           <form name="newPost" class="modal__form" id="addCardFormEl">
             <label for="card-image-input" class="modal__label">
               Image link
@@ -125,11 +123,11 @@
         </div>
       </div>
     </div>
-    <div class="modal modal_is-opened-type-preview" id="image-preview-modal">
-      <div class="modal__container">
+    <div class="modal modal_type_preview" id="image-preview-modal">
+      <div class="modal__preview-container">
         <button
           aria-label="close modal"
-          class="modal__close-btn_type_preview"
+          class="modal__close-btn modal__close-btn_type_preview"
           type="button"
         ></button>
         <img

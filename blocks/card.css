@@ -60,7 +60,7 @@
   border: none;
   cursor: pointer;
   position: absolute;
-  margin-top: 10px;
+  top: 16px;
   right: 16px;
   background-color: transparent;
   transition: background-image 0.2 ease;

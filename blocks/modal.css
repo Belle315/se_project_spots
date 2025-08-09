@@ -30,6 +30,10 @@
   border-radius: 8px;
 }
 
+.modal__preview-container {
+  position: relative;
+}
+
 .modal__close-btn_type_preview {
   position: absolute;
   top: 0;

@@ -45,9 +45,7 @@ const editProfileForm = editProfileModal.querySelector(".modal__form");
 
 const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
-const newPostCloseBtn = newPostModal.querySelector(
-  ".modal__close-btn_type_preview"
-);
+const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const addCardFormEl = newPostModal.querySelector(".modal__form");
 
 const profileNameEl = document.querySelector(".profile__name");

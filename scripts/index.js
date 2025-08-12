@@ -32,9 +32,7 @@ const initialCards = [
 // DOM elements
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
-const editProfileCloseBtn = editProfileModal.querySelector(
-  ".modal__close-btn_type_preview"
-);
+const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 const editProfileNameInput = editProfileModal.querySelector(
   "#profile-name-input"
 );
@@ -72,14 +70,14 @@ function getCardElement(data) {
   const cardElement = cardTemplateEl.cloneNode(true);
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
-  const LikeBtn = cardElement.querySelector(".card__like-btn");
+  const likeBtn = cardElement.querySelector(".card__like-btn");
   const deleteBtn = cardElement.querySelector(".card__delete-btn");
 
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
   cardTitleEl.textContent = data.name;
-  LikeBtn.addEventListener("click", function (evt) {
-    LikeBtn.classList.toggle("card__like-btn-active");
+  likeBtn.addEventListener("click", function (evt) {
+    likeBtn.classList.toggle("card__like-btn-active");
   });
 
   deleteBtn.addEventListener("click", function (evt) {
@@ -88,7 +86,6 @@ function getCardElement(data) {
   });
 
   cardImageEl.addEventListener("click", function () {
-    console.log("Preview clicked:", data.link);
     modalImage.src = data.link;
     modalImage.alt = data.name;
     modalCaption.textContent = data.name;

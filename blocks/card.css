@@ -49,8 +49,9 @@
   opacity: 1;
 }
 
-.card__like-btn-active {
+.card__like-btn_active {
   background-image: url(../images/UnionRed.svg);
+  background-color: transparent;
 }
 
 .card__delete-btn {

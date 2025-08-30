@@ -146,6 +146,20 @@ addCardFormEl.addEventListener("submit", function (evt) {
 modalCloseBtn.addEventListener("click", function (evt) {
   closeModal(imagePreviewModal);
 });
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("click", (evt) => {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
+document.addEventListener("keydown", (evt) => {
+  if (evt.key === "Escape") {
+    document.querySelectorAll(".modal.modal_is-opened").forEach((modal) => {
+      closeModal(modal);
+    });
+  }
+});
 
 // initial cards
 initialCards.forEach(function (item) {

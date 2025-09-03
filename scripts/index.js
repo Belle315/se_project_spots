@@ -77,7 +77,7 @@ function getCardElement(data) {
   cardImageEl.alt = data.name;
   cardTitleEl.textContent = data.name;
   likeBtn.addEventListener("click", function (evt) {
-    likeBtn.classList.toggle("card__like-btn-active");
+    likeBtn.classList.toggle("card__like-btn_active");
   });
 
   deleteBtn.addEventListener("click", function (evt) {
@@ -126,6 +126,7 @@ function handleEscapeKey(evt) {
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  resetFormErrors(editProfileModal, validationConfig);
   openModal(editProfileModal);
 });
 

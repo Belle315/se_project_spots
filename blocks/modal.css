@@ -23,41 +23,29 @@
 
 .modal__container {
   position: relative;
-  padding: 32px;
+  padding: 36px 50px 32px;
   background-color: #fff;
   max-width: 730px;
   width: 100%;
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .modal__preview-container {
   position: relative;
 }
 
-.modal__close-btn.modal__close-btn_type_preview {
-  position: absolute;
+.modal__close-btn_type_preview {
   top: 0;
   right: -32px;
-  height: 40px;
-  width: 40px;
-  border-style: none;
   background-image: url(../images/CloseIconWhite.svg);
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  padding: 0;
-  opacity: 0.8;
   z-index: 1002;
 }
 
 .modal__close-btn {
   position: absolute;
-  top: 30px;
-  right: 50px;
   width: 40px;
   height: 40px;
-  background-image: url(../images/CloseIcon.svg);
   background-position: center;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -82,6 +70,7 @@
   color: #212121;
   gap: 8px;
   border: 1px solid #212121;
+  box-sizing: border-box;
 }
 
 .modal__input_invalid {

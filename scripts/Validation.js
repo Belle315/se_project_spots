@@ -1,14 +1,22 @@
-const checkInputValidity = (formElement, inputElement, config) => {
+const showInputError = (formElement, inputElement, config) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
+  errorElement.textContent = inputElement.validationMessage;
+  errorElement.classList.add(config.errorVisibleClass);
+  inputElement.classList.add(config.inputErrorClass);
+};
 
+const hideInputError = (formElement, inputElement, config) => {
+  const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
+  errorElement.textContent = "";
+  errorElement.classList.remove(config.errorVisibleClass);
+  inputElement.classList.remove(config.inputErrorClass);
+};
+
+const checkInputValidity = (formElement, inputElement, config) => {
   if (!inputElement.validity.valid) {
-    errorElement.textContent = inputElement.validationMessage;
-    errorElement.classList.add(config.errorVisibleClass);
-    inputElement.classList.add(config.inputErrorClass);
+    showInputError(formElement, inputElement, config);
   } else {
-    errorElement.textContent = "";
-    errorElement.classList.remove(config.errorVisibleClass);
-    inputElement.classList.remove(config.inputErrorClass);
+    hideInputError(formElement, inputElement, config);
   }
 };
 
@@ -38,6 +46,15 @@ const setEventListeners = (formElement, config) => {
       checkInputValidity(formElement, inputElement, config);
       toggleButtonState(inputList, buttonElement, config);
     });
+  });
+};
+
+const resetFormErrors = (formElement, config) => {
+  const inputList = Array.from(
+    formElement.querySelectorAll(config.inputSelector)
+  );
+  inputList.forEach((inputElement) => {
+    hideInputError(formElement, inputElement, config);
   });
 };
 

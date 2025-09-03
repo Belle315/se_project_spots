@@ -17,6 +17,12 @@ const toggleButtonState = (inputList, buttonElement, config) => {
     (inputElement) => inputElement.validity.valid
   );
   buttonElement.disabled = !isFormValid;
+
+  if (!isFormValid) {
+    buttonElement.classList.add(config.inactiveButtonClass);
+  } else {
+    buttonElement.classList.remove(config.inactiveButtonClass);
+  }
 };
 
 const setEventListeners = (formElement, config) => {

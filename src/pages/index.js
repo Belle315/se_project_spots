@@ -1,3 +1,21 @@
+import {
+  enableValidation,
+  validationConfig,
+  resetFormErrors,
+  showInputError,
+  hideInputError,
+  checkInputValidity,
+} from "../scripts/validation.js";
+import "./index.css";
+import addImg from "../images/add-img.svg";
+document.querySelector(".profile__add-img").src = addImg;
+import editProfileIcon from "../images/edit-icon.svg";
+document.querySelector(".profile__edit-img").src = editProfileIcon;
+import logo from "../images/Logo.svg";
+document.querySelector(".header__logo").src = logo;
+import avatar from "../images/Avatar.svg";
+document.querySelector(".profile__avatar").src = avatar;
+
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -172,3 +190,5 @@ initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+enableValidation(validationConfig);

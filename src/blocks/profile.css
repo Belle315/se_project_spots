@@ -12,6 +12,47 @@
   width: 190px;
 }
 
+.profile__avatar-container {
+  position: relative;
+}
+
+.profile__avatar-container::after {
+  content: "Edit Avatar";
+  position: absolute;
+  width: 88px;
+  height: 16px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #ffff;
+  order: 1;
+  top: 162px;
+  left: 55px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.profile__avatar-container:hover::after {
+  opacity: 1;
+}
+
+.profile__avatar-edit-btn {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 28px;
+  background: none;
+}
+
+@media screen and (max-width: 627px) {
+  .profile__avatar-edit-btn {
+    opacity: 1;
+  }
+}
+
 .profile__column {
   display: flex;
   flex-direction: column;

@@ -60,9 +60,7 @@ console.log("cardsList element:", cardsList);
 const imagePreviewModal = document.querySelector("#image-preview-modal");
 const modalImage = imagePreviewModal.querySelector(".modal__image");
 const modalCaption = imagePreviewModal.querySelector(".modal__caption");
-const modalCloseBtn = imagePreviewModal.querySelector(
-  ".modal__close-btn_type_preview",
-);
+const modalCloseBtn = imagePreviewModal.querySelector(".modal__close-btn");
 
 let selectedCard = null;
 let selectedCardId = null;
@@ -176,8 +174,9 @@ editProfileForm.addEventListener("submit", function (evt) {
   const name = editProfileNameInput.value;
   const about = editProfileDescriptionInput.value;
 
-  Promise.all([api.updateUserInfo({ name, about })])
-    .then(([userData, avatarData]) => {
+  api
+    .updateUserInfo({ name, about })
+    .then((userData) => {
       profileNameEl.textContent = userData.name;
       profileDescriptionEl.textContent = userData.about;
       closeModal(editProfileModal);
@@ -225,6 +224,12 @@ newPostCloseBtn.addEventListener("click", function () {
 addCardFormEl.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
+  const submitBtn = evt.target.querySelector(".modal__submit-btn");
+  const originalText = submitBtn.textContent;
+
+  submitBtn.textContent = "Saving...";
+  submitBtn.disabled = true;
+
   const link = newPostContentInput.value;
   const name = newPostTitleInput.value;
 
@@ -236,7 +241,11 @@ addCardFormEl.addEventListener("submit", function (evt) {
       addCardFormEl.reset();
       closeModal(newPostModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    });
 });
 
 modalCloseBtn.addEventListener("click", function (evt) {
@@ -245,13 +254,24 @@ modalCloseBtn.addEventListener("click", function (evt) {
 
 deleteCardForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
+
+  const submitBtn = evt.target.querySelector(".modal__submit-btn");
+  const originalText = submitBtn.textContent;
+
+  submitBtn.textContent = "Deleting...";
+  submitBtn.disabled = true;
+
   api
     .removeCard(selectedCardId)
     .then(() => {
       selectedCard.remove();
       closeModal(deleteCardModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    });
 });
 
 editAvatarForm.addEventListener("submit", (evt) => {

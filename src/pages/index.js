@@ -46,6 +46,7 @@ const addCardFormEl = newPostModal.querySelector(".modal__form");
 
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
+const profileAvatarEl = document.querySelector(".profile__avatar");
 
 const newPostTitleInput = document.querySelector("#photo-caption");
 const newPostContentInput = document.querySelector("#card-image-input");
@@ -72,6 +73,13 @@ const avatarEditBtn = document.querySelector(".profile__avatar-edit-btn");
 const editAvatarModal = document.querySelector("#edit-avatar-modal");
 const editAvatarForm = document.querySelector("#edit-avatar-form");
 const avatarLinkInput = document.querySelector("#avatar-link-input");
+const avatarContainer = document.querySelector(".profile__avatar-container");
+
+avatarContainer.addEventListener("click", () => {
+  avatarLinkInput.value = "";
+  resetFormErrors(editAvatarModal, validationConfig);
+  openModal(editAvatarModal);
+});
 
 // Functions
 function getCardElement(data) {
@@ -207,7 +215,8 @@ deleteCardCancelBtn.addEventListener("click", function () {
   closeModal(deleteCardModal);
 });
 
-avatarEditBtn.addEventListener("click", () => {
+avatarEditBtn.addEventListener("click", (evt) => {
+  evt.stopPropagation();
   avatarLinkInput.value = "";
   resetFormErrors(editAvatarModal, validationConfig);
   openModal(editAvatarModal);
@@ -238,13 +247,18 @@ addCardFormEl.addEventListener("submit", function (evt) {
     .then((newCard) => {
       const cardElement = getCardElement(newCard);
       cardsList.prepend(cardElement);
+
       addCardFormEl.reset();
+      resetFormErrors(newPostModal, validationConfig);
+
       closeModal(newPostModal);
     })
-    .catch(console.error)
+    .catch((err) => {
+      console.error(err);
+      submitBtn.disabled = false; // Only re-enable on error
+    })
     .finally(() => {
       submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
     });
 });
 
@@ -279,15 +293,24 @@ editAvatarForm.addEventListener("submit", (evt) => {
 
   const submitBtn = evt.target.querySelector(".modal__submit-btn");
   const originalText = submitBtn.textContent;
+
   submitBtn.textContent = "saving...";
+  submitBtn.disabled = true;
 
   api
     .updateAvatar({ avatar: avatarLinkInput.value })
     .then((userData) => {
-      document.querySelector(".profile__avatar").src = userData.avatar;
+      profileAvatarEl.src = userData.avatar;
+
+      editAvatarForm.reset();
+      resetFormErrors(editAvatarModal, validationConfig);
+
       closeModal(editAvatarModal);
     })
-    .catch(console.error)
+    .catch((err) => {
+      console.error(err);
+      submitBtn.disabled = false; // Only re-enable on error
+    })
     .finally(() => {
       submitBtn.textContent = originalText;
     });
@@ -300,7 +323,7 @@ api
 
     profileNameEl.textContent = userData.name;
     profileDescriptionEl.textContent = userData.about;
-    document.querySelector(".profile__avatar").src = userData.avatar;
+    profileAvatarEl.src = userData.avatar;
     console.log("Cards received:", cards);
     console.log("Number of cards:", cards.length);
 

@@ -1,6 +1,9 @@
 .cards {
   padding-top: 20px;
   border-style: none;
+  width: 413;
+  height: 445;
+  opacity: 1;
 }
 
 .cards__list {

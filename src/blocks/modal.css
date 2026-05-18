@@ -45,8 +45,8 @@
 .modal__close-btn_delete {
   background: transparent url("../images/closeBtnWhite.svg") center/24px
     no-repeat;
-  right: -29px;
-  top: -3px;
+  top: -5px;
+  right: -28px;
 }
 
 .modal__close-btn:hover {
@@ -84,7 +84,7 @@
 .modal__title {
   margin: 0 0 20px;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 23px;
   line-height: 1;
   color: #212121;
 }
@@ -93,8 +93,8 @@
   width: 156px;
   height: 52px;
   border-radius: 8px;
-  background: #ff6565;
-  color: #212121;
+  background: #212121;
+  color: #fff;
   font-size: 16px;
   font-weight: 500;
   border: none;
@@ -102,6 +102,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#delete-card-modal .modal__submit-btn {
+  background: #ff6565;
+  color: white;
 }
 
 .modal__submit-btn:hover {
@@ -133,9 +138,10 @@
 
 .modal__button-row {
   display: flex;
-  justify-content: center;
   gap: 12px;
+  justify-content: center;
   margin-top: 24px;
+  align-items: center;
 }
 
 .modal_type_delete .modal__container {
@@ -163,19 +169,49 @@
   max-height: 80vh;
   display: flex;
   flex-direction: column;
+  align-items: c8enter;
+}
+
+.modal_type_preview .modal__container {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  max-width: none;
+  width: auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .modal_type_preview .modal__image {
   max-width: 90vw;
-  max-height: 80vh;
+  max-height: 70vh;
   object-fit: contain;
+  border-radius: 8px;
+}
+
+.modal_type_preview .modal__caption {
+  position: absolute;
+  bottom: -52px;
+  left: 16px;
+  background: #212121;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 14px;
 }
 
 .modal_type_preview .modal__close-btn {
   position: absolute;
-  top: -40px;
-  right: 0;
+  top: 20px;
+  right: 20px;
+  background: transparent url("../images/closeBtnWhite.svg") center/24px
+    no-repeat;
+  opacity: 0.8;
+}
+
+.modal_type_preview .modal__close-btn:hover {
+  opacity: 1;
 }
 
 @media screen and (max-width: 480px) {
@@ -185,20 +221,35 @@
   }
 
   .modal__container {
-    max-width: 90%;
-    border-radius: 8px;
-  }
-
-  .modal__submit-btn,
-  .modal__cancel-btn {
-    width: 100%;
-  }
-
-  .modal_type_delete .modal__button-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: -23px;
+    width: 300px;
+    height: 208px;
+    gap: 12px;
+    opacity: 1;
     flex-direction: column;
+    padding: 12px;
   }
 
   .modal__title {
-    font-size: 22px;
+    font-size: 20px;
+    margin-top: -20px;
+  }
+
+  #delete-card-modal .modal__button-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: -16px;
+  }
+
+  #delete-card-modal .modal__close-btn {
+    top: -34px;
+    right: 1px;
+    width: 28px;
+    height: 28px;
   }
 }

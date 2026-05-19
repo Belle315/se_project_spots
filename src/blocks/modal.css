@@ -61,12 +61,11 @@
   font-size: 16px;
   color: rgba(33, 33, 33, 0.7);
 }
-
 .modal__input {
   padding: 14px 12px;
   border-radius: 8px;
   border: 1px solid #212121;
-  font-size: 16px;
+  font-size: 20px;
   color: #212121;
 }
 
@@ -203,8 +202,8 @@
 
 .modal_type_preview .modal__close-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: -43px;
+  right: -6px;
   background: transparent url("../images/closeBtnWhite.svg") center/24px
     no-repeat;
   opacity: 0.8;
@@ -251,5 +250,190 @@
     right: 1px;
     width: 28px;
     height: 28px;
+  }
+
+  /* EDIT PROFILE MODAL — MOBILE VIEW */
+  #edit-profile-modal .modal__container {
+    width: 92%;
+    max-width: 380px;
+    padding: 28px 20px;
+    border-radius: 12px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: auto;
+    margin-top: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  #edit-profile-modal .modal__title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: -10px;
+  }
+
+  #edit-profile-modal .modal__label {
+    width: 100%;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  #edit-profile-modal .modal__input {
+    width: 89%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+
+  #edit-profile-modal .modal__button-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  #edit-profile-modal .modal__submit-btn {
+    width: 100%;
+    height: 48px;
+    background: #212121;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 8px;
+  }
+
+  #edit-profile-modal .modal__close-btn {
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    background-size: 18px;
+    background: transparent url("../images/CloseIconBlk.svg") center/24px
+      no-repeat;
+  }
+
+  /* NEW POST MODAL */
+
+  #new-post-modal .modal__container {
+    width: 89%;
+    max-width: 380px;
+    padding: 28px 20px;
+    border-radius: 12px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: auto;
+    margin-top: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  #new-post-modal .modal__title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  #new-post-modal .modal__label {
+    width: 100%;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  #new-post-modal .modal__input {
+    width: 90%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  #new-post-modal .modal__button-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  #new-post-modal .modal__submit-btn {
+    width: 100%;
+    height: 48px;
+    background: #212121;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 8px;
+  }
+
+  #new-post-modal .modal__close-btn {
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    background-size: 38px;
+  }
+
+  /* EDIT AVATAR MODAL */
+
+  #edit-avatar-modal .modal__container {
+    width: 100%;
+    max-width: 380px;
+    padding: 28px 20px;
+    border-radius: 12px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: auto;
+    margin-top: 0;
+  }
+
+  #edit-avatar-modal .modal__title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: -15px;
+  }
+
+  #edit-avatar-modal .modal__label {
+    width: 100%;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  #edit-avatar-modal .modal__input {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: -4px;
+  }
+
+  #edit-avatar-modal .modal__button-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  #edit-avatar-modal .modal__submit-btn {
+    width: 100%;
+    height: 48px;
+    background: #212121;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 8px;
+  }
+
+  #edit-avatar-modal .modal__close-btn {
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    background-size: 38px;
   }
 }
